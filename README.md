@@ -12,19 +12,15 @@ The system automates the collection of video metadata, performs natural language
 * **Automated Data Extraction:** Scrapes video metadata (views, likes, duration, thumbnail URLs) using the YouTube Data API v3.
 * **Custom Performance Metric:** Calculates a View-to-Subscriber (V/S) ratio to normalize performance across different channel sizes, filtering out "noise" from large channels.
 * **Performance Tiering:** Automatically classifies videos into three distinct categories:
-* * Viral: V/S Ratio > 2.0 (Outperformed channel size by 200%)
-* * Average: V/S Ratio between 0.1 and 2.0
-* * Flop: V/S Ratio < 0.1
-Comparative Keyword Mining (N-Grams):
-
-
-
+  * Viral: V/S Ratio > 2.0 
+  * Average: V/S Ratio between 0.1 and 2.0
+  * Flop: V/S Ratio < 0.1
 * **Sentiment Analysis:** Utilizes VADER (Valence Aware Dictionary and sEntiment Reasoner) to correlate title sentiment intensity with viral success.
 * **Comparative Keyword Mining:** Extracts n-grams (unigrams and bigrams) to identify vocabulary specific to viral videos while excluding generic search terms and common stopwords.
-* * Viral Keywords: Identifies the most frequent unigrams and bigrams within the "Viral" tier to pinpoint successful hooks.
-* * Unique Flop Keywords: Generates a list of keywords found in underperforming videos but excludes any terms also present in the viral list. This subtraction logic eliminates generic niche terms (e.g., "tutorial," "guide") to isolate specific vocabulary associated with failure.
+  * Viral Keywords: Identifies the most frequent unigrams and bigrams within the "Viral" tier to pinpoint successful hooks.
+  * Unique Flop Keywords: Generates a list of keywords found in underperforming videos but excludes any terms also present in the viral list. This subtraction logic eliminates generic niche terms (e.g., "tutorial," "guide") to isolate specific vocabulary associated with failure.
 * **Thumbnail Analytics:**
-* * **Dominant Color Extraction:** Uses K-Means clustering to identify high-performing color palettes.
+  * **Dominant Color Extraction:** Uses K-Means clustering to identify high-performing color palettes.
 
 
 
