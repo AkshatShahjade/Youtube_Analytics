@@ -12,8 +12,8 @@ The system automates the collection of video metadata, performs natural language
 * **Automated Data Extraction:** Scrapes video metadata (views, likes, duration, thumbnail URLs) using the YouTube Data API v3.
 * **Custom Performance Metric:** Calculates a View-to-Subscriber (V/S) ratio to normalize performance across different channel sizes, filtering out "noise" from large channels.
 * **Performance Tiering:** Automatically classifies videos into three distinct categories:
-  * Viral: V/S Ratio > 2.0 
-  * Average: V/S Ratio between 0.1 and 2.0
+  * Viral: V/S Ratio > 10.0 
+  * Average: V/S Ratio between 0.1 and 10.0
   * Flop: V/S Ratio < 0.1
 * **Sentiment Analysis:** Utilizes VADER (Valence Aware Dictionary and sEntiment Reasoner) to correlate title sentiment intensity with viral success.
 * **Comparative Keyword Mining:** Extracts n-grams (unigrams and bigrams) to identify vocabulary specific to viral videos while excluding generic search terms and common stopwords.
